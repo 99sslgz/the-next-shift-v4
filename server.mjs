@@ -10,7 +10,7 @@ export function createServer(){return http.createServer(async(req,res)=>{
   if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'});res.end();return;}
   let pathname;
   try{pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400);res.end('Invalid URL');return;}
-  const allowed=new Set(['index.html','styles.css','game.css','v4.css','v4-app.mjs','v4-engine.mjs','v4-game.mjs','v4-world.mjs','v4-ui.mjs','game.mjs','favicon.svg']);
+  const allowed=new Set(['index.html','styles.css','game.css','v4.css','v4-app.mjs','v4-engine.mjs','v4-game.mjs','five-game.mjs','v4-world.mjs','v4-ui.mjs','game.mjs','favicon.svg']);
   const name=pathname==='/'?'index.html':pathname.slice(1);
   if(!allowed.has(name)){res.writeHead(404,{'Content-Type':'text/plain'});res.end('Not found');return;}
   try{

@@ -5,3 +5,42 @@
 @media(max-width:480px){.live-world-grid{grid-template-columns:1fr 1fr}.world-signal{min-height:88px;padding:13px 12px}.world-signal:nth-child(3){border-right:1px solid #cbd3bd}.world-signal:nth-child(2),.world-signal:nth-child(4){border-right:0}.world-signal:nth-child(4){border-bottom:1px solid #cbd3bd}.world-signal:last-child{grid-column:1/-1;min-height:70px}.world-signal>strong{font-size:13px}.world-signal>span{font-size:9px}.live-world-heading{align-items:flex-start;gap:9px}.live-world-heading>.eyebrow{font-size:8px}.live-world-heading>span:last-child{font-size:8px}.live-world{margin-bottom:23px}.change-grid{grid-template-columns:1fr}.change-card{padding:12px 14px}.impact-panel>h3{font-size:25px}.impact-panel .worker-reaction blockquote{font-size:21px}.worker-reaction{padding:17px}.scene-cause{padding:13px 14px;font-size:11px}.scene-cause>span{font-size:7px}.world-mood-tag{font-size:7px;left:29%;top:34%}.vignette-story>p{font-size:15px;line-height:1.95}.ending-journal>summary{font-size:24px;gap:12px}.ending-journal>summary>span{display:none}.v4-ending .ending-layout{gap:27px}.closing-signal strong{font-size:13px}.game-sidebar .worker-reaction{margin-bottom:20px}.game-sidebar .compact-file .worker-file-top{display:none}.game-sidebar .compact-file{border-top:1px solid var(--line);padding-top:4px}.locked-reason{font-size:10px!important}.v4-ending .ending-postcard{margin-top:0}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 @media print{.live-world,.worker-reaction,.impact-panel,.developing-world,.scene-cause{display:none!important}.ending-journal:not([open]){display:none}.vignette-story>p{font-size:12pt}.v4-ending h1{font-size:42px}.ending-layout>aside{display:none}}
+
+/* Story openings share the original paper, ink, and drawn-character palette. */
+.prologue-main{padding-top:28px;padding-bottom:64px}
+.chapter-opening{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:70px;align-items:start;padding:42px 0 20px}
+.opening-copy>.eyebrow{font-size:13px;letter-spacing:1.3px;color:var(--orange)}
+.opening-copy h1{font-size:clamp(44px,4.7vw,66px);max-width:640px;margin:20px 0 28px;letter-spacing:-2px;line-height:1.08}
+.opening-story{max-width:610px;font-size:17px;line-height:1.8}
+.opening-story p+p{margin-top:17px}
+.opening-inheritance{margin-top:24px;padding:16px 0 0;border-top:1px solid var(--line);font-size:16px;line-height:1.7;color:var(--muted);max-width:610px}
+.opening-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:32px}
+.opening-actions .button{font-size:16px;padding:15px 25px}
+.opening-actions>span{font-size:14px;line-height:1.6;color:var(--muted)}
+.opening-scene{border-left:1px solid var(--line);padding-left:30px;margin-top:6px}
+.opening-person{display:flex;align-items:center;gap:24px}
+.opening-person>div:last-child{display:flex;flex-direction:column;gap:5px}
+.opening-person .eyebrow{font-size:12px}
+.opening-person strong{font:38px/1.2 var(--serif);font-weight:400}
+.opening-person>div>span:last-child{font-size:15px;color:var(--muted)}
+.opening-scene blockquote{font:italic 27px/1.5 var(--serif);margin:25px 0 30px;max-width:350px}
+.opening-scene .warehouse{height:265px}
+.opening-caption{font-size:13px;line-height:1.7;color:var(--muted);margin-top:13px}
+.portrait.opening-portrait{width:112px;height:124px}
+.opening-portrait .portrait-head,.opening-portrait.priya .portrait-head{left:35px;top:23px;transform:scale(1.55);transform-origin:top left}
+.opening-portrait .portrait-body{width:93px;height:72px;left:10px;bottom:-13px;border-width:10px;border-radius:35px 35px 0 0}
+.opening-portrait .portrait-body:before{left:32px;width:7px;height:72px}
+.opening-portrait .portrait-glow{width:112px;height:112px}
+.opening-portrait .portrait-initial{font-size:15px;right:12px;bottom:8px}
+/* Full-height hair was painting over Priya's face inside its stacking context. */
+.portrait.priya .portrait-head{background:#b97d58;box-shadow:-5px 0 0 #30302c,5px 0 0 #30302c}
+.portrait.priya .hair{height:11px;width:32px;left:-2px;top:-3px;border-radius:16px 15px 5px 2px;background:#30302c;z-index:1}
+.portrait.priya .eyes{position:absolute;inset:0;z-index:3}
+.portrait.priya .eyes:before,.portrait.priya .eyes:after{background:#2d211d;width:3px;height:3px;top:17px}
+.portrait .mouth{position:absolute;left:9px;top:25px;width:9px;height:3px;border-bottom:1.5px solid #503328;border-radius:0 0 7px 7px;z-index:3}
+.portrait.priya .mouth{border-color:#48291f;top:25px}
+.chapter-track small,.decision-kicker,.card-progress{font-size:13px}
+@media(max-width:900px){.chapter-opening{gap:35px}.opening-scene{padding-left:22px}.opening-person{gap:15px}.opening-copy h1{font-size:48px}}
+@media(max-width:680px){.prologue-main{padding-top:18px;padding-bottom:35px}.chapter-opening{grid-template-columns:1fr;padding-top:22px;gap:35px}.opening-copy h1{font-size:44px}.opening-story{font-size:16px}.opening-scene{border-left:0;border-top:1px solid var(--line);padding:26px 0 0;margin:0}.opening-scene blockquote{max-width:none;margin:20px 0}.opening-scene .world-frame{max-width:460px}.opening-actions{gap:15px}.opening-actions>span{font-size:14px}.opening-person strong{font-size:32px}}
+.crew-roster .portrait.small .portrait-head{left:13px;top:8px;transform:scale(.7);transform-origin:top left}
+.crew-roster .portrait.small .portrait-body{left:-2px;bottom:-25px}

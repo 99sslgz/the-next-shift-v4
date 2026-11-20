@@ -1,83 +1,50 @@
-# The Next Shift — V4
+# The Next Shift — five-decision stories
 
-**[Play the game](https://99sslgz.github.io/the-next-shift-v4/)**
+A playable warehouse ethics story by Team 12. This feature branch revises V4 with story openings and exactly five decisions for each of Tim, Priya, and Tom. A full campaign has 15 decisions. The original cream, forest green, terracotta, serif headings, and illustrated warehouse remain.
 
-A public, browser-based warehouse ethics game by Team 12. Open the game link to play without an account or installation. Progress stays in the visitor’s own browser.
+This work is on `feature/five-decision-stories`. GitHub Pages currently publishes `main`. The [public game](https://99sslgz.github.io/the-next-shift-v4/) changes when the feature branch is merged into `main`.
 
-## Share with the team
+## Open this version locally
 
-- Game website — https://99sslgz.github.io/the-next-shift-v4/
-- Source repository — https://github.com/99sslgz/the-next-shift-v4
+Double-click **Start-Next-Shift.cmd** and keep its window open while playing. Extract the entire ZIP first if using the downloadable copy. The launcher finds Node.js 20+ from a normal installation or the current Codex runtime, and selects another port when the default is busy. No application packages or compilation are needed.
 
-The website is published with GitHub Pages from the main branch. The root index.html loads the V4 application from dist/. The .nojekyll file keeps the JavaScript modules and other static files available as supplied.
+If Node.js and Codex are absent, install [Node.js LTS](https://nodejs.org). Use the launcher because opening index.html directly restricts JavaScript module loading in browsers.
 
-## Working on the website
+## Three short stories
 
-The game source is in dist/. Edit the V4 modules and styles there. No installation or compilation is needed to play the hosted website. Run `node --test tests/v4.test.mjs` to verify changes. If dist/index.html changes, run `node scripts/update-pages-entry.mjs` to refresh the public entry page before pushing to main.
+Each chapter starts with a short scene introducing the person, the conflict, and the player's role. Entering a story does not count as a decision. A visible counter shows the five decisions. There are no extra decision detours.
 
-A local, branching warehouse game for Team 12’s AMR Surveillance Policy project. V4 retains the cream paper, forest green, terracotta, serif headings, drawn characters, and warehouse floor of v1.
+- **Tim** — identifiable rankings, a supported break, recognition for shared work, robot-assignment re-identification, and a handover that verifies the boundary.
+- **Priya** — event-specific evidence, a specific unresolved safety question, reviewed access, the supervisor's update, and validation with worker participation and bounded retention.
+- **Tom** — an appeal with authority, contextual evidence, preservation of disputed evidence, meaningful notice, and an implemented or explicitly unfinished remedy.
 
-## Open the local website
+Later prompts, available records, moods, willingness to speak, queue pressure, and endings still depend on earlier decisions. A denied break can affect later reporting trust. An identifiable link cannot appear in an update unless it was actually released. A reviewer can reject a poorly justified request. A promised remedy is not portrayed as a completed return without authority, context, a fair process, and bounded preserved evidence.
 
-Extract the entire ZIP. Double-click **Start-Next-Shift.cmd** and keep its window open while playing. The launcher finds Node.js 20+ from a normal installation or the current Codex runtime. It does not use a version-specific runtime path. A busy port is handled by selecting the next available local port and opening that address.
+## Consequences and replay
 
-On a computer without Node.js or Codex, install Node.js LTS from https://nodejs.org. No application packages or build step are needed. Use the launcher because browsers restrict module loading when index.html is opened directly.
+The floor and five world signals react after each decision. Before-and-after cards show immediate changes, and delayed effects advance on committed decisions. Reading slowly has no penalty. The character roster keeps earlier reactions visible during later chapters.
 
-## What changes in V4
+The game retains 20 ending families, including eight for the connected campaign. Endings depict a later shift, meeting, home, or return to work. The separate journal holds the exact decisions and policy explanations. Rewind clears a selected decision and everything after it, then recalculates the world. Completed routes can be compared, and journals downloaded locally.
 
-The game contains 52 authored decision scenes across Tim, Priya, and Tom, with 20 ending families. A player sees a subset of the scenes because earlier conditions select later situations. The connected campaign carries the warehouse state between all three chapters. Single chapters start from their own initial conditions.
+Progress uses `team12-next-shift-five-v1` in the visitor's browser. The older V4 save remains under its previous key. This edition has a different event structure and does not reinterpret an older route as a shortened one.
 
-Five visible signals describe the current world.
+## Project boundaries
 
-- The current character’s mood, expressed through a portrait, a line of dialogue, and an illustrative floor marker.
-- The team’s willingness to speak up.
-- Queue pressure, also reflected in waiting carts and the route illustration.
-- The data boundary, including active histories, inference risks, restricted incident files, and preserved dispute evidence.
-- The state of relevant evidence or accountability checks.
+The original scenarios and policy rules come from **CT3 - Senario.pdf**. The project scope and synthetic-data restrictions come from **Team 12 - Project Scope & Team Charter.pdf**. The team's cross-examination informs the unresolved-safety-question gate and indirect worker-identification issue.
 
-These are authored, qualitative story states. Internal ordinal values drive transitions. They do not estimate worker health, actual feelings, warehouse throughput, injury rates, or policy effectiveness. Policy assessments are separate from character reactions.
+All dialogue, records, event timings, emotions, consequences, and endings are authored fiction. Mood, trust, and queue signals are qualitative story states, not measurements or predictions of worker health, throughput, injuries, or policy effectiveness. The premature-message diagnosis is a synthetic extension, not a claim about a vendor. Reinstatement is an authored employment outcome, not an automatic legal result.
 
-## Interconnected decisions
+There are no visitor accounts, analytics, response uploads, real worker records, or warehouse connections. The illustration does not simulate robot physics. The local server binds only to 127.0.0.1.
 
-- Delaying Tim’s break immediately changes his mood and opens a confrontation. The trainee’s response can travel into later reporting trust.
-- Protecting a break without preparing relief creates a packing problem. Missing queue coordination can create a separate overflow decision.
-- Asking for training after neglecting cover can produce a refusal that requires a concrete assignment or another response.
-- A team bonus can create group pressure even after individual rankings disappear.
-- A name-free robot dashboard can produce a reconstructed worker comparison. Restricting software incompletely can encourage a linked paper workaround.
-- Priya can withhold an account when the available reporting channel is not trusted. A protected channel makes that record available.
-- A supervisor’s update cannot include an identity link that was never released, or a pace comparison that was never obtained. Obtaining a restricted link still does not automatically authorize forwarding it.
-- Forwarding information beyond its purpose creates a disclosure problem and later reporting consequences.
-- A diagnosis without prepared validation time opens a further decision instead of silently counting as a completed check.
-- Tom’s account can depend on a usable appeal channel. Missing contextual evidence produces another inquiry.
-- A previously preserved appeal copy enables recovery after deletion. Without that earlier copy, the recovery option is unavailable.
-- A reviewer without authority creates a further obstacle. A promised remedy needs implementation before the story can portray a return.
+## Source and verification
 
-Before-and-after cards show immediate signal changes. The next scene explains why it exists. Delayed ripples advance only on committed decisions. There is no penalty for reading slowly or leaving the page open. The character roster preserves earlier reactions while another chapter unfolds.
+- `dist/five-game.mjs` defines the 15 decisions, openings, conditional record access, and endings. `dist/v4-game.mjs` exports this active model.
+- `dist/game.mjs` retains the original scenario and policy material.
+- `dist/v4-world.mjs` defines reactions, delayed effects, visible signals, and ending stories.
+- `dist/v4-engine.mjs` validates and replays decisions, including introduction transitions, restore, rewind, and journal export.
+- `dist/v4-app.mjs` and `dist/v4-ui.mjs` render the experience.
+- `dist/styles.css`, `dist/game.css`, and `dist/v4.css` preserve and extend the visual design. Priya's hair is layered around her face so facial features remain exposed.
 
-## Endings and replay
+Run `npm test` and `npm run check`. The tests enumerate every legal standalone route, verify five decisions per chapter and 15 per campaign, reach every ending family, and check access restrictions, delayed consequences, remedies, rewind, restore, rendered campaign transitions, and local assets. The rendering test checks markup and event handling. It does not assess visual layout.
 
-Endings depict the following shift, a later meeting, or a worker’s home or return. They show the resulting conditions and relationships without repeating the labels of the player’s choices. A separate collapsed journal holds the actual decisions, explanations, policy assessments, and world changes.
-
-Rewind from the journal to remove a decision and everything after it. The engine replays the remaining valid events, recalculating moods, evidence availability, delayed ripples, and later chapters. Completed routes and discovered endings remain in the browser until reset is confirmed. A comparison describes how the visible conditions differ between completed worlds.
-
-Progress is browser-local under **team12-next-shift-v4**, separate from older versions. Reload and use Continue your shift to resume. A journal can be downloaded as a local text file. If browser storage is unavailable, the game remains playable for the current visit.
-
-## Sources and project restrictions
-
-The three original scenarios and four policy rules come from **CT3 - Senario.pdf**. The scope and synthetic-data restrictions come from **Team 12 - Project Scope & Team Charter.pdf**. The live cross-examination informs the unresolved-safety-question gate and the robot-assignment re-identification test.
-
-All added dialogue, events, records, timings, emotions, planning allocations, branches, and endings are fictional. The early completion-message finding is a synthetic extension, not a claim about a real vendor. A depicted reinstatement is one authored employment outcome after review, not a rule automatically implied by the policy.
-
-There are no visitor accounts, analytics, response uploads, real worker records, warehouse connections, or physically accurate robot simulation. The local server binds only to 127.0.0.1. The proposal’s additional safeguards remain options for the team to evaluate.
-
-## Source structure and verification
-
-- dist/game.mjs holds the original scenario and policy material reused by the V4 model.
-- dist/v4-game.mjs adds follow-up scenes, context-dependent access, and the routing rules.
-- dist/v4-world.mjs defines discrete reactions, delayed effects, visible signals, and ending stories.
-- dist/v4-engine.mjs validates and replays decisions, restores progress, handles rewind, and exports journals.
-- dist/v4-ui.mjs and dist/v4-app.mjs render the world, decisions, and controls.
-- dist/styles.css, dist/game.css, and dist/v4.css retain and extend the visual design.
-- tests/v4.test.mjs checks 20 reachable endings, all 52 scenes, available alternatives, 150 deterministic route variations, causal chains, evidence gates, restoration, rewind, story content, and local serving.
-
-Run **node --test tests/v4.test.mjs**. The application has no third-party runtime dependencies.
+The root `index.html` is the GitHub Pages entry. After editing `dist/index.html`, run `npm run prepare:pages` to refresh it. `.nojekyll` preserves the supplied static modules and assets.
